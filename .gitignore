@@ -1,0 +1,50 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Integration test configuration
+src/integration-test/resources/integration-test*.properties
+!src/integration-test/resources/*template*.properties
+
+# Local example configuration with credentials
+examples/local/dataverse-source-connector*.json
+!examples/local/*template*.json
+
+# Confluent Cloud example configuration with credentials
+examples/confluent-cloud/dataverse-source-connector*.json
+!examples/confluent-cloud/*template*.json
+examples/confluent-cloud/confluent-cloud*.properties
+!examples/confluent-cloud/*template*.properties 
+
+# Test log file
+System.out*

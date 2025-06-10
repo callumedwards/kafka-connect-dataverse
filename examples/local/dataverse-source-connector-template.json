@@ -1,0 +1,20 @@
+{
+  "name": "dataverse-source-connector",
+  "config": {
+    "connector.class": "callum.edwards.kafka.connect.dataverse.DataverseSourceConnector",
+    "tasks.max": "1",
+    "topic.prefix": "dataverse",
+    "dataverse.url": "https://your-dataverse-instance.crm.dynamics.com",
+    "dataverse.login.accessTokenURL": "https://login.microsoftonline.com/your-tenant-id/oauth2/v2.0/token",
+    "dataverse.login.clientId": "your-client-id",
+    "dataverse.login.secret": "your-client-secret",
+    "dataverse.tables": "accounts,contacts",
+    "dataverse.skip.initial.load": "false",
+    "dataverse.max.page.size": "5000",
+    "dataverse.batch.size": "5000",
+    "poll.interval.ms": "30000",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+  }
+} 

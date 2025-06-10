@@ -1,0 +1,15 @@
+# Integration Test Configuration Template
+# Copy this file to integration-test.properties and fill in your actual values
+
+# Dataverse Connection Information
+dataverse.url=https://your-instance.crm.dynamics.com
+dataverse.tables=accounts,contacts
+dataverse.delta.record={"table":"accounts","key":"accountid","record":{"name":"Test Account"}}
+
+# Azure AD OAuth Authentication
+dataverse.login.accessTokenURL=https://login.microsoftonline.com/your-tenant-id/oauth2/v2.0/token
+dataverse.login.clientId=your-client-id
+dataverse.login.secret=your-client-secret
+
+# Test Configuration
+integration.test.timeout.seconds=30 
